@@ -10,10 +10,8 @@ async function sharedMetaData(params) {
     // enable this for resolving opengraph image
     // metadataBase: new URL(settings.url),
     title: {
-      default:
-        settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
-      template: "%s | Stablo"
+      default: settings?.title || "DevTav - Blog ",
+      template: "%s | Devtav"
     },
     description:
       settings?.description ||

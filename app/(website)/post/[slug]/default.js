@@ -65,10 +65,12 @@ export default function Post(props) {
                     dateTime={post?.publishedAt || post._createdAt}>
                     {format(
                       parseISO(post?.publishedAt || post._createdAt),
-                      "MMMM dd, yyyy"
+                      "dd MMMM, yyyy"
                     )}
                   </time>
-                  <span>· {post.estReadingTime || "5"} min read</span>
+                  <span>
+                    · {post.estReadingTime || "5"} min de leitura
+                  </span>
                 </div>
               </div>
             </div>
@@ -98,7 +100,7 @@ export default function Post(props) {
             <Link
               href="/"
               className="bg-brand-secondary/20 rounded-full px-5 py-2 text-sm text-blue-600 dark:text-blue-500 ">
-              ← View all posts
+              ← Voltar para página inicial
             </Link>
           </div>
           {post.author && <AuthorCard author={post.author} />}
